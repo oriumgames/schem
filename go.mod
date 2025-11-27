@@ -6,8 +6,8 @@ require (
 	github.com/df-mc/dragonfly v0.10.8
 	github.com/go-gl/mathgl v1.2.0
 	github.com/oriumgames/crocon v0.1.0
-	github.com/oriumgames/nbt v0.2.1-0.20251116145213-c2441a5078bc
-	github.com/oriumgames/schem/format v0.0.0
+	github.com/oriumgames/nbt v0.2.0
+	github.com/oriumgames/schem/format v0.2.0
 )
 
 require (
