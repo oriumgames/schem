@@ -137,3 +137,16 @@ schematic.SetBlock(0, 0, 0, &format.BlockState{
 })
 format.WriteFile(output, schematic)
 ```
+
+## Acknowledgments
+This work is based on
+[pitheguy/schemconvert](https://github.com/pitheguy/schemconvert),
+[hollow-cube/schem](https://github.com/hollow-cube/schem),
+[paxxxw/litematic-converter](https://github.com/paxxxw/litematic-converter),
+[smylermc/litemapy](https://github.com/smylermc/litemapy),
+[df-mc/schematic](https://github.com/df-mc/schematic),
+[justtaldevelops/schem](https://github.com/justtaldevelops/schem),
+[rubixdev/mcdata](https://github.com/rubixdev/mcdata),
+[prismarinejs/minecraft-data](https://github.com/prismarinejs/minecraft-data),
+[maruohon/litematica](https://github.com/maruohon/litematica),
+[schematic-ppecification](https://github.com/spongepowered/schematic-ppecification).
