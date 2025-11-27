@@ -39,8 +39,8 @@ github.com/oriumgames/crocon v0.2.0 h1:rJzOI2X8VI9sQX1SgAabdP5x0YKgXbVVdAISV/GSJ
 github.com/oriumgames/crocon v0.2.0/go.mod h1:TQ5CQ78B46aa60Sunz32S/lBYn+Y+b6+ojKyu9wYGXU=
 github.com/oriumgames/nbt v0.2.0 h1:cp1Z4p5M77F9aUPF6m7PRd+kRnhzY3Gb6my2/iKQzzc=
 github.com/oriumgames/nbt v0.2.0/go.mod h1:3ZfSkQQjEVjDrygB1vhW6tUAIhXtFKBthg6Q1zk1qtA=
-github.com/oriumgames/schem/format v0.2.1 h1:S1zny9xgCFHcvp9K6RvfJt3eS0qcucPth+0x6uJYNWU=
-github.com/oriumgames/schem/format v0.2.1/go.mod h1:Sd6fvU82YZBu/7g2OES1FC4gJpjLE5zWG+OeQsu3+ng=
+github.com/oriumgames/schem/format v0.2.3 h1:auXtXrbZ7jjKan4pg6faYM64KV1Qa9pCQLsT9UDKoYU=
+github.com/oriumgames/schem/format v0.2.3/go.mod h1:Sd6fvU82YZBu/7g2OES1FC4gJpjLE5zWG+OeQsu3+ng=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/sandertv/go-raknet v1.14.3-0.20250305181847-6af3e95113d6 h1:ZfK7NCzIDE+dzp5x6NIO4JDLsjsOxi762CNR1Obds2Q=

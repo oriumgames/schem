@@ -7,7 +7,8 @@ require (
 	github.com/go-gl/mathgl v1.2.0
 	github.com/oriumgames/crocon v0.2.0
 	github.com/oriumgames/nbt v0.2.0
-	github.com/oriumgames/schem/format v0.2.1
+	github.com/oriumgames/schem/format v0.2.3
+	github.com/sandertv/gophertunnel v1.50.0
 )
 
 require (
@@ -21,7 +22,6 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/compress v1.17.11 // indirect
 	github.com/sandertv/go-raknet v1.14.3-0.20250305181847-6af3e95113d6 // indirect
-	github.com/sandertv/gophertunnel v1.50.0 // indirect
 	github.com/segmentio/fasthash v1.0.3 // indirect
 	golang.org/x/exp v0.0.0-20250103183323-7d7fa50e5329 // indirect
 	golang.org/x/mod v0.22.0 // indirect

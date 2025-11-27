@@ -106,7 +106,18 @@ func (s *Structure) At(x, y, z int, _ func(x, y, z int) world.Block) (world.Bloc
 				// Failed to convert - return air to skip
 				return block.Air{}, nil
 			}
-			ret = nbter.DecodeNBT(map[string]any(*be)).(world.Block)
+
+			m, ok := any(be).(*map[string]any)
+			if !ok || m == nil {
+				return block.Air{}, nil
+			}
+
+			tag, ok := (*m)["tag"].(map[string]any)
+			if !ok {
+				return block.Air{}, nil
+			}
+
+			return nbter.DecodeNBT(tag).(world.Block), nil
 		} else {
 			ret = nbter.DecodeNBT(map[string]any{}).(world.Block)
 		}
