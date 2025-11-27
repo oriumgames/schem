@@ -1,6 +1,6 @@
 package format
 
-import "github.com/oriumgames/pile/schem/format/internal/base"
+import "github.com/oriumgames/schem/format/internal/base"
 
 type BlockState = base.BlockState
 type BlockEntity = base.BlockEntity

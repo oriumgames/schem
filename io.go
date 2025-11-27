@@ -4,7 +4,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/oriumgames/pile/schem/format"
+	"github.com/oriumgames/schem/format"
 )
 
 // Read reads a schematic file with auto-format detection.

@@ -1,7 +1,5 @@
-module github.com/oriumgames/pile/schem/format
+module github.com/oriumgames/schem/format
 
 go 1.24
 
-toolchain go1.24.9
-
-require github.com/oriumgames/nbt v0.1.0
+require github.com/oriumgames/nbt v0.2.0

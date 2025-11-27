@@ -6,10 +6,10 @@ import (
 	"io"
 	"sort"
 
-	"github.com/oriumgames/pile/schem/format/internal/axiom"
-	"github.com/oriumgames/pile/schem/format/internal/litematica"
-	"github.com/oriumgames/pile/schem/format/internal/mcedit"
-	"github.com/oriumgames/pile/schem/format/internal/sponge"
+	"github.com/oriumgames/schem/format/internal/axiom"
+	"github.com/oriumgames/schem/format/internal/litematica"
+	"github.com/oriumgames/schem/format/internal/mcedit"
+	"github.com/oriumgames/schem/format/internal/sponge"
 )
 
 // FormatReader is a function that reads a schematic from an io.Reader.

@@ -6,7 +6,7 @@ import (
 	"github.com/df-mc/dragonfly/server/block"
 	"github.com/df-mc/dragonfly/server/world"
 	"github.com/oriumgames/crocon"
-	"github.com/oriumgames/pile/schem/format"
+	"github.com/oriumgames/schem/format"
 )
 
 // Structure wraps a format.Schematic and implements world.Structure.

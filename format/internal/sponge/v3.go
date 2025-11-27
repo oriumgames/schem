@@ -8,7 +8,7 @@ import (
 	"maps"
 
 	"github.com/oriumgames/nbt"
-	"github.com/oriumgames/pile/schem/format/internal/base"
+	"github.com/oriumgames/schem/format/internal/base"
 )
 
 // v3NBT is the NBT structure for Sponge Schematic Version 3

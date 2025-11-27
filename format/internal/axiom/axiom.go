@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	"github.com/oriumgames/nbt"
-	"github.com/oriumgames/pile/schem/format/internal/base"
+	"github.com/oriumgames/schem/format/internal/base"
 )
 
 const (

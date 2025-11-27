@@ -1,4 +1,4 @@
-module github.com/oriumgames/pile/schem
+module github.com/oriumgames/schem
 
 go 1.24
 
@@ -7,7 +7,7 @@ require (
 	github.com/go-gl/mathgl v1.2.0
 	github.com/oriumgames/crocon v0.1.0
 	github.com/oriumgames/nbt v0.2.1-0.20251116145213-c2441a5078bc
-	github.com/oriumgames/pile/schem/format v0.0.0
+	github.com/oriumgames/schem/format v0.0.0
 )
 
 require (

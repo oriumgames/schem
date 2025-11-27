@@ -9,7 +9,7 @@ import (
 	"math/bits"
 
 	"github.com/oriumgames/nbt"
-	"github.com/oriumgames/pile/schem/format/internal/base"
+	"github.com/oriumgames/schem/format/internal/base"
 )
 
 // litematicaNBT represents the main NBT structure
