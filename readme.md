@@ -149,4 +149,4 @@ This work is based on
 [rubixdev/mcdata](https://github.com/rubixdev/mcdata),
 [prismarinejs/minecraft-data](https://github.com/prismarinejs/minecraft-data),
 [maruohon/litematica](https://github.com/maruohon/litematica),
-[schematic-ppecification](https://github.com/spongepowered/schematic-ppecification).
+[schematic-specification](https://github.com/spongepowered/schematic-specification).
