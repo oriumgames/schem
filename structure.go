@@ -7,6 +7,7 @@ import (
 	"github.com/df-mc/dragonfly/server/world"
 	"github.com/oriumgames/crocon"
 	"github.com/oriumgames/schem/format"
+	"github.com/sandertv/gophertunnel/minecraft/protocol"
 )
 
 // Structure wraps a format.Schematic and implements world.Structure.
@@ -55,7 +56,7 @@ func (s *Structure) At(x, y, z int, _ func(x, y, z int) world.Block) (world.Bloc
 	b, err := s.converter.ConvertBlock(crocon.BlockRequest{
 		ConversionRequest: crocon.ConversionRequest{
 			FromVersion: fromVersion,
-			ToVersion:   "1.21.120",
+			ToVersion:   protocol.CurrentVersion,
 			FromEdition: crocon.JavaEdition,
 			ToEdition:   crocon.BedrockEdition,
 		},
@@ -87,15 +88,38 @@ func (s *Structure) At(x, y, z int, _ func(x, y, z int) world.Block) (world.Bloc
 	// Handle block entity data if present
 	if nbter, ok := ret.(world.NBTer); ok {
 		ent := s.schematic.BlockEntity(x, y, z)
+
+		from := crocon.BlockEntity(ent.Data)
+		from["id"] = ent.ID
+
+		be, err := s.converter.ConvertBlockEntity(crocon.BlockEntityRequest{
+			ConversionRequest: crocon.ConversionRequest{
+				FromVersion: fromVersion,
+				ToVersion:   protocol.CurrentVersion,
+				FromEdition: crocon.JavaEdition,
+				ToEdition:   crocon.BedrockEdition,
+			},
+			BlockEntity: from,
+		})
+		if err != nil {
+			// Failed to convert - return air to skip
+			return block.Air{}, nil
+		}
+
 		if ent != nil {
-			ret = nbter.DecodeNBT(ent.Data).(world.Block)
+			ret = nbter.DecodeNBT(map[string]any(*be)).(world.Block)
 		} else {
 			ret = nbter.DecodeNBT(map[string]any{}).(world.Block)
 		}
 	}
 
-	// TODO: Handle liquids (waterlogged blocks, etc.)
-	return ret, nil
+	// Handle waterlogged blocks
+	var liquid world.Liquid
+	if waterlogged, ok := state.Properties["waterlogged"].(bool); ok && waterlogged {
+		liquid = block.Water{}
+	}
+
+	return ret, liquid
 }
 
 // Schematic returns the underlying format.Schematic.
