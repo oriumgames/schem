@@ -118,13 +118,6 @@ When placing in Dragonfly worlds:
 - Air blocks are handled explicitly to clear existing blocks
 - Unsupported blocks default to air
 
-## Notes & Limits
-- Litematica: Single-region only (multi-region files use first region)
-- Biomes: Support varies by format (v1=none, v2=2D, v3=3D)
-- Dimension validation: All formats reject invalid/negative dimensions
-- Bounding box optimization: Litematica and Axiom calculate tight bounds
-- Block entities and entities are adjusted for calculated offsets
-
 ## Examples
 ```go
 // Convert between formats
