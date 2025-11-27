@@ -3,7 +3,7 @@
 Universal minecraft schematics library 
 
 ## Key Features
-- Multi-format support: Sponge (v1/v2/v3), Litematica, Axiom, MCEdit
+- Multi-format support: Sponge (v1/v2/v3), Litematica (v6/v7), Axiom, MCEdit
 - Auto-detection of schematic format
 - Unified schematic interface across all formats
 - Dragonfly integration: implements `world.Structure` interface
@@ -34,7 +34,7 @@ width, height, length := schematic.Dimensions()
 
 ## Supported Formats
 - **Sponge Schematic v1/v2/v3** — `.schem` files, supports biomes and entities
-- **Litematica** — `.litematic` files, supports single-region schematics
+- **Litematica v6/v7** — `.litematic` files, supports single-region schematics
 - **Axiom** — `.axiom` files, chunk-based storage with thumbnails
 - **MCEdit** — `.schematic` files, legacy format with block ID/metadata
 
@@ -100,6 +100,7 @@ type Schematic interface {
     Format() string
     DataVersion() int
     SetDataVersion(version int)
+    Version() string
 }
 ```
 
