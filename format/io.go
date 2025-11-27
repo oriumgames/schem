@@ -19,21 +19,23 @@ type FormatReader func(io.Reader) (Schematic, error)
 type FormatWriter func(io.Writer, Schematic) error
 
 var formatReaders = map[string]FormatReader{
-	"axiom":      axiom.Read,
-	"litematica": litematica.Read,
-	"mcedit":     mcedit.Read,
-	"sponge_v1":  sponge.ReadV1,
-	"sponge_v2":  sponge.ReadV2,
-	"sponge_v3":  sponge.ReadV3,
+	"axiom":         axiom.Read,
+	"mcedit":        mcedit.Read,
+	"sponge_v1":     sponge.ReadV1,
+	"sponge_v2":     sponge.ReadV2,
+	"sponge_v3":     sponge.ReadV3,
+	"litematica_v6": litematica.ReadV6,
+	"litematica_v7": litematica.ReadV7,
 }
 
 var formatWriters = map[string]FormatWriter{
-	"axiom":      axiom.Write,
-	"litematica": litematica.Write,
-	"mcedit":     mcedit.Write,
-	"sponge_v1":  sponge.WriteV1,
-	"sponge_v2":  sponge.WriteV2,
-	"sponge_v3":  sponge.WriteV3,
+	"axiom":         axiom.Write,
+	"mcedit":        mcedit.Write,
+	"sponge_v1":     sponge.WriteV1,
+	"sponge_v2":     sponge.WriteV2,
+	"sponge_v3":     sponge.WriteV3,
+	"litematica_v6": litematica.WriteV6,
+	"litematica_v7": litematica.WriteV7,
 }
 
 // Read reads data from r, detects the schematic format, and returns the parsed schematic.

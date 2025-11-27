@@ -53,10 +53,14 @@ func detectGzipFormat(data []byte) (string, error) {
 	// Check for Litematica (has "Version" and "Regions" at root)
 	if version, ok := root["Version"].(int32); ok {
 		if _, hasRegions := root["Regions"]; hasRegions {
-			if version == 6 || version == 7 {
-				return "litematica", nil
+			switch version {
+			case 6:
+				return "litematica_v6", nil
+			case 7:
+				return "litematica_v7", nil
+			default:
+				return "", fmt.Errorf("unsupported Litematica version: %d", version)
 			}
-			return "", fmt.Errorf("unsupported Litematica version: %d", version)
 		}
 	}
 

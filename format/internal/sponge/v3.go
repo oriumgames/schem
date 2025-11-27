@@ -129,10 +129,10 @@ func ReadV3(r io.Reader) (base.Schematic, error) {
 		}
 
 		// Extract position
-		if pos, ok := beData["Pos"].([]any); ok && len(pos) >= 3 {
-			be.X = int(pos[0].(int32))
-			be.Y = int(pos[1].(int32))
-			be.Z = int(pos[2].(int32))
+		if pos, ok := beData["Pos"].([3]int32); ok {
+			be.X = int(pos[0])
+			be.Y = int(pos[1])
+			be.Z = int(pos[2])
 		}
 
 		// Extract ID
