@@ -89,24 +89,23 @@ func (s *Structure) At(x, y, z int, _ func(x, y, z int) world.Block) (world.Bloc
 	if nbter, ok := ret.(world.NBTer); ok {
 		ent := s.schematic.BlockEntity(x, y, z)
 
-		from := crocon.BlockEntity(ent.Data)
-		from["id"] = ent.ID
-
-		be, err := s.converter.ConvertBlockEntity(crocon.BlockEntityRequest{
-			ConversionRequest: crocon.ConversionRequest{
-				FromVersion: fromVersion,
-				ToVersion:   protocol.CurrentVersion,
-				FromEdition: crocon.JavaEdition,
-				ToEdition:   crocon.BedrockEdition,
-			},
-			BlockEntity: from,
-		})
-		if err != nil {
-			// Failed to convert - return air to skip
-			return block.Air{}, nil
-		}
-
 		if ent != nil {
+			from := crocon.BlockEntity(ent.Data)
+			from["id"] = ent.ID
+
+			be, err := s.converter.ConvertBlockEntity(crocon.BlockEntityRequest{
+				ConversionRequest: crocon.ConversionRequest{
+					FromVersion: fromVersion,
+					ToVersion:   protocol.CurrentVersion,
+					FromEdition: crocon.JavaEdition,
+					ToEdition:   crocon.BedrockEdition,
+				},
+				BlockEntity: from,
+			})
+			if err != nil {
+				// Failed to convert - return air to skip
+				return block.Air{}, nil
+			}
 			ret = nbter.DecodeNBT(map[string]any(*be)).(world.Block)
 		} else {
 			ret = nbter.DecodeNBT(map[string]any{}).(world.Block)
