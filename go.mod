@@ -7,7 +7,7 @@ require (
 	github.com/go-gl/mathgl v1.2.0
 	github.com/oriumgames/crocon v0.1.0
 	github.com/oriumgames/nbt v0.2.0
-	github.com/oriumgames/schem/format v0.2.0
+	github.com/oriumgames/schem/format v0.2.1
 )
 
 require (
