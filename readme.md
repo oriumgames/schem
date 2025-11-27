@@ -143,6 +143,3 @@ schematic.SetBlock(0, 0, 0, &format.BlockState{
 })
 format.WriteFile(output, schematic)
 ```
-
-## License
-This project builds upon schematic format implementations and provides a unified interface for multiple formats.
